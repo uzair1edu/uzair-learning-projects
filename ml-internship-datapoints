@@ -1,0 +1,13 @@
+# ML Internship — DataPoints (Summary)
+
+This repository documents my 4-month internship work on performance analysis and ML strategy.
+
+## Key Contributions
+- Improved system latency and operational throughput.
+- Monitored model health and performance metrics.
+- Conducted data-driven performance analysis and shared actionable insights.
+
+## Contents
+- `data_cleaning.py` — sample data cleaning script
+- `model_training.py` — simplified model training example
+- `performance_summary.md` — short PDF-style summary
