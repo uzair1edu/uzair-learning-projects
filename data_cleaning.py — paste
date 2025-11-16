@@ -1,0 +1,19 @@
+# data_cleaning.py
+# Simple sample script: load CSV, drop missing, basic checks
+
+import pandas as pd
+
+df = pd.read_csv('sample_data.csv') if False else pd.DataFrame({
+    'customer_id':[1,2,3,4],
+    'name':['A','B',None,'D'],
+    'email':['a@mail.com','b@mail.com','c@mail','d@mail.com'],
+    'dob':['1990-01-01','1992-05-03','','1988-07-07']
+})
+
+# drop rows with no name
+df = df.dropna(subset=['name'])
+# simple email format check
+df['email_valid'] = df['email'].str.contains(r'^[^@]+@[^@]+\.[^@]+$', regex=True)
+# show summary
+print("Rows:", len(df))
+print(df)
